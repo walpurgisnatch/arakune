@@ -5,5 +5,8 @@
   :depends-on ("cl-ppcre")
   :components ((:module "src"
                 :components
-                ((:file "fileparser"))))
+                ((:file "utils")
+                 (:file "writer" :depends-on ("utils"))
+                 (:file "parser" :depends-on ("parser"))
+                 (:file "fileparser" :depends-on ("writer"))))
   :description "Text file parser")
