@@ -58,7 +58,18 @@
     (when groups
       (cons (elt groups 0) (elt groups 1)))))
 
+(defun indent-split (line)
+  (regexp-groups "^( *)(.*)" line))
+
+(defun indent (line)
+  (elt (indent-split line) 0))
+
+(defun remove-indent (line)
+  (elt (indent-split line) 1))
+
 (defun count-indent (line &optional (indent 1))
-  (let ((result (regexp-groups "^( *)." line)))
-    (when result
-      (/ (length (elt result 0)) indent))))
+  (let* ((result (indent line))
+         (count (/ (length result) indent)))
+    (if (> count 0)
+        count
+        nil)))
