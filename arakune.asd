@@ -1,4 +1,4 @@
-(defsystem "fileparser"
+(defsystem "arakune"
   :version "0.1.0"
   :author "Walpurgisnatch"
   :license "MIT"
@@ -8,5 +8,5 @@
                 ((:file "utils")
                  (:file "writer" :depends-on ("utils"))
                  (:file "parser" :depends-on ("parser"))
-                 (:file "fileparser" :depends-on ("writer"))))
+                 (:file "arakune" :depends-on ("writer"))))
   :description "Text file parser")

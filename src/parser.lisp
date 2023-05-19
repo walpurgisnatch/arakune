@@ -1,9 +1,9 @@
-(defpackage fileparser
-  (:use :cl :fileparser.utils)
+(defpackage arakune
+  (:use :cl :arakune.utils)
   (:export :parse-block
            :parse-settings))
 
-(in-package :fileparser)
+(in-package :arakune)
 
 (defun parse-block (file start &optional (end ""))
   (let ((commands nil)

@@ -1,7 +1,7 @@
-(defpackage fileparser/tests/main
+(defpackage arakune/tests/main
   (:use :cl
-        :fileparser
+        :arakune
         :rove))
-(in-package :fileparser/tests/main)
+(in-package :arakune/tests/main)
 
-;; NOTE: To run this test file, execute `(asdf:test-system :fileparser)' in your Lisp.
+;; NOTE: To run this test file, execute `(asdf:test-system :arakune)' in your Lisp.

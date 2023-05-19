@@ -1,4 +1,4 @@
-(defpackage fileparser.utils
+(defpackage arakune.utils
   (:use :cl)
   (:import-from :cl-ppcre
                 :scan-to-strings)
@@ -7,7 +7,7 @@
            :split-by-two
            :count-indent))
 
-(in-package :fileparser.utils)
+(in-package :arakune.utils)
 
 (defun component-present-p (value)
   (and value (not (eql value :unspecific))))

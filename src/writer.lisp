@@ -1,11 +1,11 @@
 (in-package :cl-user)
-(defpackage :fileparser.writer
+(defpackage :arakune.writer
   (:use :cl)
-  (:import-from :fileparser.utils
+  (:import-from :arakune.utils
                 :mkdir
                 :merge-with-dir
                 :mklist)
-  (:import-from :fileparser.templates
+  (:import-from :arakune.templates
                 :current-time
                 :basic)
   (:export :logger-setup
@@ -17,7 +17,7 @@
            :write-hashvalues-to
            :write-list-to))
 
-(in-package :fileparser.writer)
+(in-package :arakune.writer)
 
 (defvar *dir* nil)
 (defvar *log-templates* nil)
